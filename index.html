@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="MexiColor - Personalizador de la Bandera de México"
+    >
+
+    <title>MexiColor | Bandera de México</title>
+
+
+    <!-- ==================================================
+         BOOTSTRAP
+    ================================================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+         FONT AWESOME
+    ================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ==================================================
+         FAVICON
+    ================================================== -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/svgs/solid/flag.svg"
+    >
+
+
+    <!-- ==================================================
+         CSS PERSONALIZADO
+    ================================================== -->
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         CONTENEDOR PRINCIPAL
+    ================================================== -->
+
+    <div class="site-wrapper">
+
+
+        <!-- ==================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="main-header">
+
+            <div class="container">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+
+                        <i class="fa-solid fa-flag"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h1>MexiColor</h1>
+
+                        <p>Personalizador de la Bandera de México</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+            <div class="container">
+
+
+                <!-- TÍTULO -->
+
+                <section class="intro-section text-center">
+
+                    <span class="section-tag">
+                        <i class="fa-solid fa-palette"></i>
+                        Personalización
+                    </span>
+
+                    <h2>
+                        Diseña tu propia
+                        <span>Bandera de México</span>
+                    </h2>
+
+                    <p>
+                        Selecciona diferentes tonalidades para los colores
+                        de la bandera y observa los cambios en tiempo real.
+                    </p>
+
+                </section>
+
+
+
+                <!-- ==================================================
+                     PANEL DE CONFIGURACIÓN
+                ================================================== -->
+
+                <section class="control-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="small-label">
+                                CONFIGURACIÓN
+                            </span>
+
+                            <h3>
+                                Colores de la bandera
+                            </h3>
+
+                        </div>
+
+                        <div class="settings-icon">
+
+                            <i class="fa-solid fa-sliders"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-4">
+
+
+                        <!-- VERDE -->
+
+                        <div class="col-lg-4">
+
+                            <div class="color-control">
+
+                                <div class="control-title">
+
+                                    <div
+                                        class="color-indicator green-indicator"
+                                        id="greenPreview"
+                                    ></div>
+
+                                    <div>
+
+                                        <label
+                                            for="greenSelect"
+                                            class="control-label"
+                                        >
+                                            Verde
+                                        </label>
+
+                                        <span class="control-description">
+                                            Esperanza
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <select
+                                    id="greenSelect"
+                                    class="form-select"
+                                >
+
+                                    <option value="#006847">
+                                        Verde clásico — #006847
+                                    </option>
+
+                                    <option value="#008000">
+                                        Verde oscuro — #008000
+                                    </option>
+
+                                    <option value="#228B22">
+                                        Verde bosque — #228B22
+                                    </option>
+
+                                    <option value="#32CD32">
+                                        Verde lima — #32CD32
+                                    </option>
+
+                                    <option value="#0B6623">
+                                        Verde profundo — #0B6623
+                                    </option>
+
+                                </select>
+
+
+                                <div class="hex-value">
+
+                                    <span>Código HEX</span>
+
+                                    <strong id="greenHex">
+                                        #006847
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BLANCO -->
+
+                        <div class="col-lg-4">
+
+                            <div class="color-control">
+
+                                <div class="control-title">
+
+                                    <div
+                                        class="color-indicator white-indicator"
+                                    ></div>
+
+                                    <div>
+
+                                        <span class="control-label">
+                                            Blanco
+                                        </span>
+
+                                        <span class="control-description">
+                                            Unidad
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="white-color-display">
+
+                                    <span>
+                                        Color central de la bandera
+                                    </span>
+
+                                    <strong>
+                                        #FFFFFF
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="hex-value">
+
+                                    <span>Estado</span>
+
+                                    <strong>
+                                        Fijo
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ROJO -->
+
+                        <div class="col-lg-4">
+
+                            <div class="color-control">
+
+                                <div class="control-title">
+
+                                    <div
+                                        class="color-indicator red-indicator"
+                                        id="redPreview"
+                                    ></div>
+
+                                    <div>
+
+                                        <label
+                                            for="redSelect"
+                                            class="control-label"
+                                        >
+                                            Rojo
+                                        </label>
+
+                                        <span class="control-description">
+                                            Sangre de nuestros héroes
+                                            nacionales
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <select
+                                    id="redSelect"
+                                    class="form-select"
+                                >
+
+                                    <option value="#CE1126">
+                                        Rojo clásico — #CE1126
+                                    </option>
+
+                                    <option value="#800000">
+                                        Rojo oscuro — #800000
+                                    </option>
+
+                                    <option value="#B22222">
+                                        Rojo fuego — #B22222
+                                    </option>
+
+                                    <option value="#DC143C">
+                                        Carmesí — #DC143C
+                                    </option>
+
+                                    <option value="#990000">
+                                        Rojo profundo — #990000
+                                    </option>
+
+                                </select>
+
+
+                                <div class="hex-value">
+
+                                    <span>Código HEX</span>
+
+                                    <strong id="redHex">
+                                        #CE1126
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ==================================================
+                     BANDERA
+                ================================================== -->
+
+                <section class="flag-section">
+
+
+                    <div class="flag-title">
+
+                        <div>
+
+                            <span class="small-label">
+                                VISTA PREVIA
+                            </span>
+
+                            <h3>
+                                Tu bandera
+                            </h3>
+
+                        </div>
+
+
+                        <div class="live-status">
+
+                            <span class="status-dot"></span>
+
+                            En vivo
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flag-container">
+
+                        <div class="flag">
+
+
+                            <!-- VERDE -->
+
+                            <div
+                                id="greenPanel"
+                                class="flag-panel flag-green"
+                            ></div>
+
+
+
+                            <!-- BLANCO / ESCUDO -->
+
+                            <div
+                                class="flag-panel flag-white"
+                            >
+
+                                <div class="coat-of-arms">
+
+                                    <svg
+                                        viewBox="0 0 300 330"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        aria-label="Representación del escudo de México"
+                                    >
+
+                                        <!-- Águila -->
+
+                                        <path
+                                            d="M150 75
+                                            C110 35 55 45 35 80
+                                            C65 82 90 95 110 110
+                                            C78 120 55 145 45 175
+                                            C80 150 105 138 128 130
+                                            C120 165 108 190 90 215
+                                            C120 202 142 180 150 150
+                                            C158 180 180 202 210 215
+                                            C192 190 180 165 172 130
+                                            C195 138 220 150 255 175
+                                            C245 145 222 120 190 110
+                                            C210 95 235 82 265 80
+                                            C245 45 190 35 150 75Z"
+                                            fill="#754C24"
+                                        />
+
+                                        <!-- Cabeza -->
+
+                                        <ellipse
+                                            cx="160"
+                                            cy="82"
+                                            rx="30"
+                                            ry="32"
+                                            fill="#8A5A2B"
+                                        />
+
+                                        <!-- Pico -->
+
+                                        <path
+                                            d="M184 82 L225 92 L184 102Z"
+                                            fill="#D4A017"
+                                        />
+
+                                        <!-- Ojo -->
+
+                                        <circle
+                                            cx="169"
+                                            cy="74"
+                                            r="6"
+                                            fill="#111111"
+                                        />
+
+                                        <!-- Serpiente -->
+
+                                        <path
+                                            d="M153 115
+                                            C120 112 115 140 145 150
+                                            C175 160 180 180 158 192
+                                            C138 202 130 220 140 238"
+                                            fill="none"
+                                            stroke="#008000"
+                                            stroke-width="18"
+                                            stroke-linecap="round"
+                                        />
+
+                                        <!-- Cabeza de serpiente -->
+
+                                        <path
+                                            d="M142 145
+                                            C125 140 118 126 130 116
+                                            C143 106 160 116 165 130
+                                            C153 125 145 128 142 145Z"
+                                            fill="#006847"
+                                        />
+
+                                        <!-- Nopal -->
+
+                                        <path
+                                            d="M145 210
+                                            C125 210 115 235 120 270
+                                            L120 315
+                                            L150 315
+                                            L150 280
+                                            C185 290 215 275 205 248
+                                            C198 230 178 228 150 240
+                                            L150 210Z"
+                                            fill="#4C9A2A"
+                                        />
+
+                                        <!-- Nopal lateral -->
+
+                                        <path
+                                            d="M120 250
+                                            C95 245 88 260 92 275
+                                            C97 290 110 292 122 287"
+                                            fill="#4C9A2A"
+                                        />
+
+                                        <!-- Rama izquierda -->
+
+                                        <path
+                                            d="M105 210
+                                            C75 190 55 150 70 105
+                                            C78 82 96 82 101 100
+                                            C87 140 92 170 115 195Z"
+                                            fill="#4C9A2A"
+                                        />
+
+                                        <!-- Rama derecha -->
+
+                                        <path
+                                            d="M195 210
+                                            C225 190 245 150 230 105
+                                            C222 82 204 82 199 100
+                                            C213 140 208 170 185 195Z"
+                                            fill="#4C9A2A"
+                                        />
+
+                                        <!-- Laurel verde -->
+
+                                        <path
+                                            d="M55 305 Q150 335 245 305"
+                                            fill="none"
+                                            stroke="#006847"
+                                            stroke-width="12"
+                                        />
+
+                                        <!-- Laurel rojo -->
+
+                                        <path
+                                            d="M55 305 Q150 350 245 305"
+                                            fill="none"
+                                            stroke="#CE1126"
+                                            stroke-width="7"
+                                        />
+
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ROJO -->
+
+                            <div
+                                id="redPanel"
+                                class="flag-panel flag-red"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+
+                    <div class="reset-container">
+
+                        <button
+                            id="resetBtn"
+                            class="reset-button"
+                        >
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Restaurar colores
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+
+        <!-- ==================================================
+             PIE DE PÁGINA
+        ================================================== -->
+
+        <footer class="main-footer">
+
+            <div class="container">
+
+                <div class="footer-content">
+
+
+                    <!-- IDENTIDAD -->
+
+                    <div class="footer-brand">
+
+                        <div class="footer-icon">
+
+                            <i class="fa-solid fa-flag"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>MexiColor</h4>
+
+                            <p>
+                                Personalizador de la Bandera de México
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INFORMACIÓN -->
+
+                    <div class="footer-info">
+
+                        <div class="footer-item">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <div>
+
+                                <span>Creador</span>
+
+                                <strong>
+                                    Itzel Mendoza Sánchez
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="footer-item">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <div>
+
+                                <span>No. de control</span>
+
+                                <strong>
+                                    26201715
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="footer-item">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <div>
+
+                                <span>Fecha</span>
+
+                                <strong id="currentDate">
+                                    Cargando...
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- INSTITUCIÓN -->
+
+                <div class="institution-info">
+
+                    <div>
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        <span>
+                            Tecnológico Nacional de México,
+                            Campus: Instituto Tecnológico de Pachuca
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <span>
+                            Materia: Graficación
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COPYRIGHT -->
+
+                <div class="copyright">
+
+                    <p>
+                        © <span id="currentYear"></span>
+                        Itzel Mendoza Sánchez.
+                        Todos los derechos reservados.
+                    </p>
+
+                    <p>
+                        MexiColor · Proyecto académico
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
